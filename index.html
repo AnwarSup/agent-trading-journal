@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Agentic Trading Journal — AI-Powered Trade Analytics</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'DM Sans',sans-serif;background:#0a0a1a;color:#c7d2fe;min-height:100vh}
+.cosmic{background-image:radial-gradient(at 30% 40%,rgba(99,102,241,0.12) 0,transparent 50%),radial-gradient(at 70% 60%,rgba(168,85,247,0.08) 0,transparent 50%)}
+.card{background:rgba(255,255,255,0.03);border:1px solid rgba(99,102,241,0.15);border-radius:16px;transition:all .3s}
+.card:hover{border-color:rgba(99,102,241,0.4);box-shadow:0 0 30px rgba(99,102,241,0.08)}
+.trade-win{border-left:3px solid #10b981} .trade-loss{border-left:3px solid #ef4444}
+.chart-box{position:relative;height:200px}
+</style>
+</head>
+<body class="cosmic">
+<div class="max-w-7xl mx-auto px-6 py-8">
+  <div class="flex items-center gap-4 mb-8">
+    <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-indigo-400 to-purple-600 flex items-center justify-center">
+      <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+    </div>
+    <div><h1 class="text-2xl font-bold text-white">Trading Journal</h1><p class="text-xs text-indigo-400 tracking-wider">AGENTIC ANALYTICS</p></div>
+  </div>
+  <div class="grid grid-cols-5 gap-3 mb-6">
+    <div class="card p-4 text-center"><p class="text-xs text-gray-500 mb-1">Total Trades</p><p class="text-2xl font-bold">1,247</p></div>
+    <div class="card p-4 text-center"><p class="text-xs text-gray-500 mb-1">Win Rate</p><p class="text-2xl font-bold text-emerald-400">72.3%</p></div>
+    <div class="card p-4 text-center"><p class="text-xs text-gray-500 mb-1">Profit Factor</p><p class="text-2xl font-bold text-indigo-400">2.41</p></div>
+    <div class="card p-4 text-center"><p class="text-xs text-gray-500 mb-1">Avg R:R</p><p class="text-2xl font-bold">1:3.2</p></div>
+    <div class="card p-4 text-center"><p class="text-xs text-gray-500 mb-1">Net PnL</p><p class="text-2xl font-bold text-emerald-400">+$84.2K</p></div>
+  </div>
+  <div class="grid grid-cols-3 gap-4 mb-6">
+    <div class="col-span-2 card p-6">
+      <h3 class="text-sm font-semibold text-indigo-300 mb-4">Equity Curve (90 Days)</h3>
+      <div class="chart-box"><canvas id="equityChart"></canvas></div>
+    </div>
+    <div class="card p-6">
+      <h3 class="text-sm font-semibold text-indigo-300 mb-4">AI Trade Insights</h3>
+      <div class="space-y-3">
+        <div class="p-3 rounded-lg bg-emerald-500/10 border border-emerald-500/20">
+          <p class="text-xs font-semibold text-emerald-400 mb-1">Pattern Detected</p>
+          <p class="text-xs text-gray-400">Your best trades occur between 14:00-16:00 UTC. Win rate drops 23% outside this window.</p>
+        </div>
+        <div class="p-3 rounded-lg bg-amber-500/10 border border-amber-500/20">
+          <p class="text-xs font-semibold text-amber-400 mb-1">Risk Alert</p>
+          <p class="text-xs text-gray-400">Position sizing increased 40% this week without corresponding stop-loss adjustment.</p>
+        </div>
+        <div class="p-3 rounded-lg bg-indigo-500/10 border border-indigo-500/20">
+          <p class="text-xs font-semibold text-indigo-400 mb-1">Optimization</p>
+          <p class="text-xs text-gray-400">Moving stop-loss to 1.5x ATR (from 2x) improves expectancy by 18% on your setup.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card p-6">
+    <h3 class="text-sm font-semibold text-indigo-300 mb-4">Recent Trades</h3>
+    <div class="space-y-2">
+      <div class="trade-win p-3 rounded-lg bg-white/[0.02]"><div class="flex items-center justify-between"><div><span class="text-sm font-medium text-white">ETH/USDT Long</span><span class="text-xs text-gray-500 ml-3">14:23 UTC</span></div><span class="text-sm font-bold text-emerald-400">+$2,340</span></div></div>
+      <div class="trade-loss p-3 rounded-lg bg-white/[0.02]"><div class="flex items-center justify-between"><div><span class="text-sm font-medium text-white">BTC/USDT Short</span><span class="text-xs text-gray-500 ml-3">15:07 UTC</span></div><span class="text-sm font-bold text-red-400">-$890</span></div></div>
+      <div class="trade-win p-3 rounded-lg bg-white/[0.02]"><div class="flex items-center justify-between"><div><span class="text-sm font-medium text-white">SOL/USDT Long</span><span class="text-xs text-gray-500 ml-3">16:45 UTC</span></div><span class="text-sm font-bold text-emerald-400">+$1,670</span></div></div>
+    </div>
+  </div>
+</div>
+<script>
+const days=Array.from({length:90},(_,i)=>`Day ${i+1}`);
+let equity=50000;const data=days.map(()=>{equity+=(Math.random()-0.42)*800;return Math.round(equity)});
+new Chart(document.getElementById('equityChart').getContext('2d'),{
+  type:'line',data:{labels:days,datasets:[{data,borderColor:'#6366f1',backgroundColor:'rgba(99,102,241,0.1)',fill:true,tension:0.4,pointRadius:0,borderWidth:2}]},
+  options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{x:{display:false},y:{grid:{color:'rgba(255,255,255,0.05)'},ticks:{color:'#6366f1',callback:v=>'$'+v.toLocaleString()}}}}
+});
+</script>
+</body>
+</html>
