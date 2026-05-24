@@ -1,0 +1,10 @@
+{
+  "scenario": "weekly performance review",
+  "signals": {
+    "risk_reward": 50,
+    "max_adverse_excursion": 57,
+    "plan_deviation": 64,
+    "holding_time_hours": 71,
+    "emotion_tag_risk": 78
+  }
+}

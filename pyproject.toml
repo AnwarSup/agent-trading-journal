@@ -1,0 +1,9 @@
+[project]
+name = "agent-trading-journal"
+version = "1.0.0"
+description = "Post-trade review engine that turns fills, thesis notes, and market context into measurable behavior loops."
+requires-python = ">=3.10"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
