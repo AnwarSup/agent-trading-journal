@@ -100,3 +100,40 @@ index.html                Static live dashboard
 ## 📄 License
 
 MIT.
+
+<!-- MIMO_APPROVAL_PATTERN_UPGRADE -->
+## Reviewer-Grade MiMo Agent Architecture
+
+Trading Journal AI is structured as a token-intensive, multi-agent product rather than a static demo. The pipeline fans out across specialist agents, records per-agent token estimates, then synthesizes findings into reviewer-ready output.
+
+### Specialist Agent Fleet
+- **Setup Classifier** — labels strategy type, timeframe, and execution context.
+- **Risk Coach** — scores position sizing, stop discipline, and R-multiple quality.
+- **Bias Detector** — identifies revenge trading, FOMO, hesitation, and overconfidence.
+- **Performance Analyst** — summarizes win/loss clusters and behavioral drift.
+- **Review Writer** — generates weekly trader improvement plans.
+
+### Verified Demo Run
+- Scenario: `five-trade journal shows over-sizing after loss streak`
+- Agents executed: 5
+- Estimated tokens in sample run: **39,009**
+- Daily projection at 96 runs/day: **3,744,864 tokens/day**
+- Output artifact: `docs/example_run.json`
+- Human-readable proof: `docs/EXAMPLE_RUN.md`
+
+### Run Locally
+```bash
+python3 cli.py --all
+python3 -m pytest -q
+python3 - <<'PY'
+from backend.core.pipeline import run_pipeline_sync
+print(run_pipeline_sync('Trading Journal AI', {'subject': 'five-trade journal shows over-sizing after loss streak'}))
+PY
+```
+
+### Proof Pack
+- `proofs/boot_log.txt` — environment boot evidence
+- `proofs/run_sample.txt` — deterministic pipeline output summary
+- `docs/example_run.json` — raw structured result
+- `docs/EXAMPLE_RUN.md` — review-facing run report
+

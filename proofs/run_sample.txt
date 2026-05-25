@@ -1,0 +1,4 @@
+Trading Journal AI
+5 specialist agents completed; 3 high-priority findings; 39009 estimated tokens.
+tokens=39009
+daily_projection=3744864
