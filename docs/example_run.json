@@ -3,120 +3,120 @@
   "status": "completed",
   "mode": "deterministic-reviewer-demo",
   "latency_ms": 0,
-  "summary": "5 specialist agents completed; 3 high-priority findings; 39009 estimated tokens.",
+  "summary": "5 specialist agents completed; 1 high-priority findings; 47882 estimated tokens.",
   "token_usage": {
     "project": "Trading Journal AI",
     "events": [
       {
-        "timestamp": "2026-05-25T20:14:50.876709+00:00",
+        "timestamp": "2026-05-25T20:21:02.691641+00:00",
         "project": "Trading Journal AI",
         "agent": "Liquidity Scout",
-        "estimated_tokens": 10502,
-        "severity": "high"
+        "estimated_tokens": 13259,
+        "severity": "critical"
       },
       {
-        "timestamp": "2026-05-25T20:14:50.876728+00:00",
+        "timestamp": "2026-05-25T20:21:02.691671+00:00",
         "project": "Trading Journal AI",
         "agent": "Exploit Sentinel",
-        "estimated_tokens": 6845,
-        "severity": "medium"
+        "estimated_tokens": 8288,
+        "severity": "low"
       },
       {
-        "timestamp": "2026-05-25T20:14:50.876734+00:00",
+        "timestamp": "2026-05-25T20:21:02.691679+00:00",
         "project": "Trading Journal AI",
         "agent": "Oracle Auditor",
-        "estimated_tokens": 6658,
-        "severity": "high"
-      },
-      {
-        "timestamp": "2026-05-25T20:14:50.876738+00:00",
-        "project": "Trading Journal AI",
-        "agent": "Treasury Guardian",
-        "estimated_tokens": 4313,
+        "estimated_tokens": 6309,
         "severity": "medium"
       },
       {
-        "timestamp": "2026-05-25T20:14:50.876742+00:00",
+        "timestamp": "2026-05-25T20:21:02.691683+00:00",
+        "project": "Trading Journal AI",
+        "agent": "Treasury Guardian",
+        "estimated_tokens": 7905,
+        "severity": "medium"
+      },
+      {
+        "timestamp": "2026-05-25T20:21:02.691686+00:00",
         "project": "Trading Journal AI",
         "agent": "Incident Reporter",
-        "estimated_tokens": 10691,
-        "severity": "critical"
+        "estimated_tokens": 12121,
+        "severity": "medium"
       }
     ],
-    "total_estimated_tokens": 39009,
-    "daily_projection_tokens": 3744864,
+    "total_estimated_tokens": 47882,
+    "daily_projection_tokens": 4596672,
     "agent_count": 5
   },
   "findings": [
     {
       "agent": "Liquidity Scout",
       "role": "tracks pool depth, volatility spikes, and suspicious flow concentration",
-      "severity": "high",
-      "confidence": 0.92,
-      "finding": "Liquidity Scout reviewed DeFi risk monitoring signal: five-trade journal shows over-sizing after loss streak. Risk pattern=high confidence=0.92.",
+      "severity": "critical",
+      "confidence": 0.73,
+      "finding": "Liquidity Scout reviewed DeFi risk monitoring signal: five-trade journal shows over-sizing after loss streak. Risk pattern=critical confidence=0.73.",
       "evidence": [
         "domain=DeFi risk monitoring",
         "subject_hash=8f818d3f99",
         "agent_stage=1"
       ],
-      "recommendation": "Run liquidity scout follow-up pass, capture artifacts, then prioritize high items first.",
-      "estimated_tokens": 10502
+      "recommendation": "Run liquidity scout follow-up pass, capture artifacts, then prioritize critical items first.",
+      "estimated_tokens": 13259
     },
     {
       "agent": "Exploit Sentinel",
       "role": "maps events to known attack primitives and detects anomalous protocol behavior",
-      "severity": "medium",
-      "confidence": 0.77,
-      "finding": "Exploit Sentinel reviewed DeFi risk monitoring signal: five-trade journal shows over-sizing after loss streak. Risk pattern=medium confidence=0.77.",
+      "severity": "low",
+      "confidence": 0.62,
+      "finding": "Exploit Sentinel reviewed DeFi risk monitoring signal: five-trade journal shows over-sizing after loss streak. Risk pattern=low confidence=0.62.",
       "evidence": [
         "domain=DeFi risk monitoring",
         "subject_hash=8f818d3f99",
         "agent_stage=2"
       ],
-      "recommendation": "Run exploit sentinel follow-up pass, capture artifacts, then prioritize medium items first.",
-      "estimated_tokens": 6845
+      "recommendation": "Run exploit sentinel follow-up pass, capture artifacts, then prioritize low items first.",
+      "estimated_tokens": 8288
     },
     {
       "agent": "Oracle Auditor",
       "role": "checks oracle drift, stale feeds, and manipulation windows",
-      "severity": "high",
-      "confidence": 0.67,
-      "finding": "Oracle Auditor reviewed DeFi risk monitoring signal: five-trade journal shows over-sizing after loss streak. Risk pattern=high confidence=0.67.",
+      "severity": "medium",
+      "confidence": 0.62,
+      "finding": "Oracle Auditor reviewed DeFi risk monitoring signal: five-trade journal shows over-sizing after loss streak. Risk pattern=medium confidence=0.62.",
       "evidence": [
         "domain=DeFi risk monitoring",
         "subject_hash=8f818d3f99",
         "agent_stage=3"
       ],
-      "recommendation": "Run oracle auditor follow-up pass, capture artifacts, then prioritize high items first.",
-      "estimated_tokens": 6658
+      "recommendation": "Run oracle auditor follow-up pass, capture artifacts, then prioritize medium items first.",
+      "estimated_tokens": 6309
     },
     {
       "agent": "Treasury Guardian",
       "role": "scores treasury exposure and proposes emergency controls",
       "severity": "medium",
-      "confidence": 0.63,
-      "finding": "Treasury Guardian reviewed DeFi risk monitoring signal: five-trade journal shows over-sizing after loss streak. Risk pattern=medium confidence=0.63.",
+      "confidence": 0.85,
+      "finding": "Treasury Guardian reviewed DeFi risk monitoring signal: five-trade journal shows over-sizing after loss streak. Risk pattern=medium confidence=0.85.",
       "evidence": [
         "domain=DeFi risk monitoring",
         "subject_hash=8f818d3f99",
         "agent_stage=4"
       ],
       "recommendation": "Run treasury guardian follow-up pass, capture artifacts, then prioritize medium items first.",
-      "estimated_tokens": 4313
+      "estimated_tokens": 7905
     },
     {
       "agent": "Incident Reporter",
       "role": "synthesizes operator-grade markdown incident reports",
-      "severity": "critical",
-      "confidence": 0.73,
-      "finding": "Incident Reporter reviewed DeFi risk monitoring signal: five-trade journal shows over-sizing after loss streak. Risk pattern=critical confidence=0.73.",
+      "severity": "medium",
+      "confidence": 0.65,
+      "finding": "Incident Reporter reviewed DeFi risk monitoring signal: five-trade journal shows over-sizing after loss streak. Risk pattern=medium confidence=0.65.",
       "evidence": [
         "domain=DeFi risk monitoring",
         "subject_hash=8f818d3f99",
         "agent_stage=5"
       ],
-      "recommendation": "Run incident reporter follow-up pass, capture artifacts, then prioritize critical items first.",
-      "estimated_tokens": 10691
+      "recommendation": "Run incident reporter follow-up pass, capture artifacts, then prioritize medium items first.",
+      "estimated_tokens": 12121
     }
   ]
 }
